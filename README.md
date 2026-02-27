@@ -1,9 +1,19 @@
-# world-problem-agent-
 
-Calls the OpenAI API
+# 🌍 World Problem Agent
 
-Creates a lightweight “agent”
+A simple OpenAI-powered agent that:
+- Takes your domain
+- Identifies 5 massive global problems
+- Creates a lightweight “agent”, Suggests high-leverage solution ideas
 
-Takes a domain input
+## Setup
 
-Returns 5 high-impact global problems + domain-specific solution ideas
+1. Clone repo
+2. Install dependencies:
+   pip install -r requirements.txt
+
+3. Set API key:
+   export OPENAI_API_KEY="your_key_here"
+
+4. Run:
+   python app.py
