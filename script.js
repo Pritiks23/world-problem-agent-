@@ -3,6 +3,13 @@ const output = document.getElementById("output");
 
 btn.addEventListener("click", async () => {
   const domain = document.getElementById("domain").value;
+  const apiKey = document.getElementById("apiKey").value;
+
+  if (!domain || !apiKey) {
+    output.textContent = "Please enter both domain and API key!";
+    return;
+  }
+
   output.textContent = "Generating ideas...";
 
   const prompt = `
@@ -20,7 +27,7 @@ Return as JSON array of 5 objects.
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer YOUR_OPENAI_API_KEY"
+        "Authorization": "Bearer " + apiKey
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
